@@ -8,7 +8,8 @@ let client
 // connection string
 if (typeof creds === 'string') {
   client = redis.createClient({
-    url: creds
+    url: creds,
+    no_ready_check: true
   })
 } else {
   const { host, port, password, database } = creds
@@ -17,7 +18,8 @@ if (typeof creds === 'string') {
     host,
     port,
     password,
-    db: database
+    db: database,
+    no_ready_check: true
   })
 }
 
