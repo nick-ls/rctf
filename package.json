@@ -19,7 +19,8 @@
     "test:slim": "ava",
     "test:report": "nyc --skip-full --reporter=lcov ava",
     "commit": "git cz",
-    "copy-static": "cpy \"server/**/*\" \"!**/*.{j,t}s\" \"migrations\" dist/ --parents"
+    "copy-static": "cpy \"server/**/*\" \"!**/*.{j,t}s\" \"migrations\" dist/ --parents",
+    "postinstall": "patch-package"
   },
   "nodemonConfig": {
     "watch": [
@@ -59,6 +60,7 @@
     "yaml": "1.10.0"
   },
   "devDependencies": {
+    "patch-package": "^7.0.0",
     "@types/content-disposition": "0.5.3",
     "@types/mailgun-js": "0.22.10",
     "@types/mustache": "4.0.1",

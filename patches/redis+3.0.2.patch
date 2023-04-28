@@ -1,0 +1,22 @@
+diff --git a/node_modules/redis/lib/individualCommands.js b/node_modules/redis/lib/individualCommands.js
+index d366b64..99276e2 100644
+--- a/node_modules/redis/lib/individualCommands.js
++++ b/node_modules/redis/lib/individualCommands.js
+@@ -264,7 +264,7 @@ RedisClient.prototype.client = RedisClient.prototype.CLIENT = function client ()
+             };
+         }
+     }
+-    return this.internal_send_command(new Command('client', arr, callback, call_on_write));
++    //return this.internal_send_command(new Command('client', arr, callback, call_on_write));
+ };
+ 
+ Multi.prototype.client = Multi.prototype.CLIENT = function client () {
+@@ -309,7 +309,7 @@ Multi.prototype.client = Multi.prototype.CLIENT = function client () {
+             };
+         }
+     }
+-    this.queue.push(new Command('client', arr, callback, call_on_write));
++    //this.queue.push(new Command('client', arr, callback, call_on_write));
+     return this;
+ };
+ 
